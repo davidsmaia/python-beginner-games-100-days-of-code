@@ -18,7 +18,7 @@ class Snake:
 
     # Bringing the functionality of creating the snake (by segment) from main.py
     def create_snake(self):
-        #TODO -> Create 3 turtles and position them like the video.
+        #TODO  -> Create 3 turtles and position them like the video.
         #      -> Eache turtle should be a white square (default size: 20x20).
         # For loop that creates the snake by segment -> 3 in this case
         for segment_index in range(3):
@@ -37,7 +37,6 @@ class Snake:
             new_y = self.segments[seg_num - 1].ycor()
             self.segments[seg_num].goto(new_x,new_y)
         self.segments[0].forward(MOVE_DISTANCE) #segment 1 go forward.
-
 
     # TODO Create the methods "up", "down", "left", "right" to move the snake when the arrow keys are pressed
 
