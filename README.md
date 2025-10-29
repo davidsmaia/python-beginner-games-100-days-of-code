@@ -7,6 +7,8 @@ Este repositório documenta minha evolução no aprendizado de Python através d
 Todos os projetos aqui presentes foram desenvolvidos durante o curso da Angela Yu presente na plataforma Udemy.
 Como o curso é em Inglês, meus códigos e comentários também se encontram no mesmo idioma.
 
+## Projetos Desenvolvidos
+
 ### Hangman (Day 7)
 - **Descrição:** Jogo da forca clássico, com menu interativo.
 

@@ -47,8 +47,4 @@ snake-game/
 
 ├── snake.py # Snake class implementation
 
-├── food.py # Food class implementation
-
-├── scoreboard.py # Score tracking system
-
 └── README.md # Project documentation
