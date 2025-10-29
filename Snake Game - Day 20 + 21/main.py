@@ -1,4 +1,5 @@
-from turtle import Screen, Turtle
+from turtle import Screen
+from snake import Snake
 import time
 
 screen = Screen()
@@ -7,35 +8,22 @@ screen.bgcolor("black") #screen color
 screen.title("My Snake Game")
 screen.tracer(0)
 
-# TODO -> Create 3 turtles and position them like the video.
-#      -> Eache turtle should be a white square (default size: 20x20).
+# creating a snake object
+snake = Snake()
 
-starting_x_positions = [0, -20, -40] #Y is already 0
+screen.listen() #start listen the keystrokes
 
-segments = []
-
-# For loop that creates the snake by segment -> 3 in this case
-for turtle_index in range(3):
-    new_segment = Turtle(shape="square")
-    new_segment.color("white")
-    new_segment.penup() #to not draw a line on the screen. The square will still be created
-    new_segment.setx(starting_x_positions[turtle_index])
-    segments.append(new_segment)
-
-# print(segments)
+# Functionalities to move the snake
+screen.onkey(fun=snake.up,key="Up") #Up arrow key, must move to north
+screen.onkey(fun=snake.down, key="Down") #Down arrow key, must move to south
+screen.onkey(fun=snake.left, key="Left") #Left arrow key, must move to West
+screen.onkey(fun=snake.right, key="Right") #Right arrow key, must move to East
 
 # While loop to maintain tha game on
 game_is_on = True
 while game_is_on:
-    screen.update() #updates the graphics only after the 3 pieces moves
-    time.sleep(0.1)
-
-    # For loop to move the Snake. Last segment to first segment
-    # The segment 3 goes to the position of the segment 2, segment 2 goes to the position of the segment 1...
-    for seg_num in range(len(segments) - 1, 0,-1): #start, stop, step. Starting from the last segment
-        new_x = segments[seg_num -1].xcor()
-        new_y = segments[seg_num - 1].ycor()
-        segments[seg_num].goto(new_x,new_y)
-    segments[0].forward(20) #segment 1 go forward.
+    screen.update() #refreshes the screen after 0.1 second
+    time.sleep(0.1) #delay the refresh
+    snake.move()
 
 screen.exitonclick() # hold the screen until we click to close

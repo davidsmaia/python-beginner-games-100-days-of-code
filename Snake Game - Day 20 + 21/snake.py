@@ -1,0 +1,67 @@
+# TODO Extract all the Snake Related Functionalities from main.py
+from turtle import Turtle
+
+# Global variables
+STARTING_X_POSITIONS = [0, -20, -40] #Y is already 0
+MOVE_DISTANCE = 20
+UP = 90
+DOWN = 270
+LEFT = 180
+RIGHT = 0
+
+class Snake:
+
+    def __init__(self):
+        self.segments = []
+        self.create_snake()
+        self.head = self.segments[0] # attribute created because the very first segment will always be used to move the snake
+
+    # Bringing the functionality of creating the snake (by segment) from main.py
+    def create_snake(self):
+        #TODO -> Create 3 turtles and position them like the video.
+        #      -> Eache turtle should be a white square (default size: 20x20).
+        # For loop that creates the snake by segment -> 3 in this case
+        for segment_index in range(3):
+            new_segment = Turtle(shape="square")
+            new_segment.color("white")
+            new_segment.penup() #to not draw a line on the screen. The square will still be created
+            new_segment.setx(STARTING_X_POSITIONS[segment_index])
+            self.segments.append(new_segment)
+
+    # Bringing the functionality of moving the snake from main.py
+    def move(self):
+        # For loop to move the Snake. Last segment to first segment
+        # The segment 3 goes to the position of the segment 2, segment 2 goes to the position of the segment 1...
+        for seg_num in range(len(self.segments) - 1, 0,-1): #start, stop, step. Starting from the last segment
+            new_x = self.segments[seg_num -1].xcor()
+            new_y = self.segments[seg_num - 1].ycor()
+            self.segments[seg_num].goto(new_x,new_y)
+        self.segments[0].forward(MOVE_DISTANCE) #segment 1 go forward.
+
+
+    # TODO Create the methods "up", "down", "left", "right" to move the snake when the arrow keys are pressed
+
+    # IMPORTANT NOTE: All Segments follows the very first one
+
+    # The Snake is not allowed to go to the opposite direction that's facing
+
+    # Up must move to North (90°)
+    def up(self):
+        if self.head.heading() != DOWN: #the snake CAN'T go down while facing north
+            # self.segments[0].setheading(90) #using the self.head attribute instead
+            self.head.setheading(UP)
+
+    # Down must move to South (270°)
+    def down(self):
+        if self.head.heading() != UP: #the snake CAN'T go UP while facing South
+            self.head.setheading(DOWN)
+
+    # Right must move to East (0°)
+    def right(self):
+        if self.head.heading() != LEFT: #the snake CAN'T go Left while facing East
+            self.head.setheading(RIGHT)
+
+    # Right must move to West (180°)
+    def left(self):
+        if self.head.heading() != RIGHT: #the snake CAN'T go Right while facing West
+            self.head.setheading(LEFT)
