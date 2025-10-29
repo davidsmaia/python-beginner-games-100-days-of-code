@@ -1,6 +1,6 @@
 # Higher OR Lower Game - 100 Days of Code
 
-Game created during the 14th day of the course: [100 Days of Code: The Complete Python Pro Bootcamp](https://www.udemy.com/course/100-days-of-code/?couponCode=CP130525BRGB)
+"Higher or Lower" Game created during the 14th day of the course: [100 Days of Code: The Complete Python Pro Bootcamp](https://www.udemy.com/course/100-days-of-code/?couponCode=CP130525BRGB)
 
 ## What it does:
 - The game asks the user to guess who has more followers on Instagram

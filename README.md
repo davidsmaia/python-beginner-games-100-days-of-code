@@ -1,10 +1,10 @@
-# Python Beginner Games Collection - "100 Days of Code" Course (Angela Yu)
+# Python Beginner Games Collection - *100 Days of Code* (Angela Yu)
 
 Coleção de jogos e projetos interativos desenvolvidos durante o curso [100 Days of Code: The Complete Python Pro Bootcamp](https://www.udemy.com/course/100-days-of-code/?srsltid=AfmBOor9MN3qCpzSHSlwpW-iGIEaZoRj4bMQ1rHAaDoqW5OMJrucjWH5)
 
 ## Sobre
 Este repositório documenta minha evolução no aprendizado de Python através do desenvolvimento de jogos interativos, desde conceitos básicos até programação orientada a objetos.
-Todos os projetos aqui presentes foram desenvolvidos durante o curso da Angela Yu presente na plataforma Udemy.
+Todos os projetos aqui presentes foram desenvolvidos durante o curso da **Angela Yu** presente na plataforma **Udemy**.
 Como o curso é em Inglês, meus códigos e comentários também se encontram no mesmo idioma.
 
 ## Projetos Desenvolvidos

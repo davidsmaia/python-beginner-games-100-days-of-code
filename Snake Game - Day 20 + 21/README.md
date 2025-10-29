@@ -2,17 +2,16 @@
 
 A classic Snake Game implementation in Python, developed during the course: *[100 Days of Code: The Complete Python Pro Bootcamp](https://www.udemy.com/course/100-days-of-code/?srsltid=AfmBOor9MN3qCpzSHSlwpW-iGIEaZoRj4bMQ1rHAaDoqW5OMJrucjWH5)*
 
-*This project was divided in 2 Parts, on the days 20th and 21st.*
+This project was divided in 2 Parts, on the days 20th and 21st.
 
-
-## Part 1: Animation & Coordinates (completed)
+## Part 1: Animation & Coordinates (*completed*)
 
  - Screen Setup and Creation a Snake Body
  - Animating the Snake Segments on Screen
  - Create a Snake Class & Move to OPP
  - How to Control the Snake with Keypress
 
-## Part 2: Inheritance & List Slicing (in progress)
+## Part 2: Inheritance & List Slicing (*in progress*)
 
  - Class Inheritance
  - Detect Collisions with Food
@@ -36,8 +35,6 @@ A classic Snake Game implementation in Python, developed during the course: *[10
  - **Python 3.13**
  - **Turtle Graphics**: For game visualization and graphics
  - **Time Module**: For game timing and control
-
-
 
 ## Project Structure
 
