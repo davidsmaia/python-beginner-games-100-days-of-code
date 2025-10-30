@@ -4,14 +4,14 @@ A classic Snake Game implementation in Python, developed during the course: *[10
 
 This project was divided in 2 Parts, on the days 20th and 21st.
 
-## Part 1: Animation & Coordinates (*completed*)
+## Part 1: Animation & Coordinates
 
  - Screen Setup and Creation a Snake Body
  - Animating the Snake Segments on Screen
  - Create a Snake Class & Move to OPP
  - How to Control the Snake with Keypress
 
-## Part 2: Inheritance & List Slicing (*in progress*)
+## Part 2: Inheritance & List Slicing
 
  - Class Inheritance
  - Detect Collisions with Food
