@@ -2,7 +2,7 @@
 from turtle import Turtle
 
 # Global variables
-STARTING_X_POSITIONS = [0, -20, -40] #Y is already 0
+STARTING_POSITIONS = [(0,0), (-20,0), (-40,0)]
 MOVE_DISTANCE = 20
 UP = 90
 DOWN = 270
@@ -16,17 +16,32 @@ class Snake:
         self.create_snake()
         self.head = self.segments[0] # attribute created because the very first segment will always be used to move the snake
 
-    # Bringing the functionality of creating the snake (by segment) from main.py
+    #create_snake() + add_segment() combined in fact creates the snake
     def create_snake(self):
-        #TODO  -> Create 3 turtles and position them like the video.
-        #      -> Eache turtle should be a white square (default size: 20x20).
-        # For loop that creates the snake by segment -> 3 in this case
-        for segment_index in range(3):
-            new_segment = Turtle(shape="square")
-            new_segment.color("white")
-            new_segment.penup() #to not draw a line on the screen. The square will still be created
-            new_segment.setx(STARTING_X_POSITIONS[segment_index])
-            self.segments.append(new_segment)
+        for position in STARTING_POSITIONS:
+            self.add_segment(position)
+
+
+    def add_segment(self, position):
+        new_segment = Turtle(shape="square")
+        new_segment.color("white")
+        new_segment.penup()  # to not draw a line on the screen. The square will still be created
+        new_segment.goto(position)
+        self.segments.append(new_segment)
+
+    # Add a new segment to the snake after it eats a food
+    def extend(self):
+        #getting the position of the very last segment of the snake and adding a new one on this position
+        self.add_segment(self.segments[-1].position())
+
+
+
+
+
+
+
+
+
 
     # Bringing the functionality of moving the snake from main.py
     def move(self):
