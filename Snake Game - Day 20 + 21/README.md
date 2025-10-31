@@ -38,7 +38,7 @@ This project was divided in 2 Parts, on the days 20th and 21st.
 
 ## Project Structure
 
-snake-game/
+Snake Game - Day 20 + 21/
 
 ├── main.py # Main game file
 

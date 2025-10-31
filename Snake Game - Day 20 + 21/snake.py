@@ -36,13 +36,6 @@ class Snake:
 
 
 
-
-
-
-
-
-
-
     # Bringing the functionality of moving the snake from main.py
     def move(self):
         # For loop to move the Snake. Last segment to first segment
