@@ -7,9 +7,9 @@ This project was created on the day 23.
 ## How the Game Play Works
 
  - A turtle moves forwards when the "Up" key is pressed.
- - Cars are randomly generated along the y-axis and moves from the right edge of the screen to the left edge.
- - When the turtle hits the top edge of the screen, it moves back to the original position and adds 1 point to the scoreboard
- - The car speed increases with the points.
+ - Cars are randomly generated along the y-axis and moves from one edge of the screen to another.
+ - When the turtle hits the top edge of the screen, it moves back to the original position and 1 point is added to the scoreboard
+ - The cars speed increases with the points.
  - When the turtle collides with a car, it's Game Over.
 
 ## Controls
@@ -21,6 +21,7 @@ This project was created on the day 23.
  - **Python 3.13**
  - **Turtle Graphics**: For game visualization and graphics
  - **Time Module**: For game timing and control
+ - **Random Module**: For car's colors and positions
 
 ## Project Structure
 
@@ -28,10 +29,14 @@ Turtle Crossing Game - Day 23/
 
 ├── main.py # Main game file
 
-├── car_manager.py # Cars functionalities file 
+├── car_manager.py # Cars functionalities
 
-├── player.py # Turtle controlled by the player file
+├── player.py # Turtle controlled by the player
 
-├── scoreboard.py # Scoreboard file
+├── scoreboard.py # Scoreboard generator
+
+├── road_line.py # Center road lines
+
+├── turtle-crossing-start.zip # Initial files provided by Angela Yu
 
 └── README.md # Project documentation
