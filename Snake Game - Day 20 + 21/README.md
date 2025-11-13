@@ -3,6 +3,7 @@
 A classic Snake Game implementation in Python, developed during the course: *[100 Days of Code: The Complete Python Pro Bootcamp](https://www.udemy.com/course/100-days-of-code/?srsltid=AfmBOor9MN3qCpzSHSlwpW-iGIEaZoRj4bMQ1rHAaDoqW5OMJrucjWH5)*
 
 This project was divided in 2 Parts, on the days 20th and 21st.
+The project was update on day 24.
 
 ## Part 1: Animation & Coordinates
 
@@ -19,6 +20,11 @@ This project was divided in 2 Parts, on the days 20th and 21st.
  - Detect Collisions with the Wall
  - Detect Collisions with your own Tail
  - How to Slice Lists & Tuples in Python
+
+### Update Day 24: Saving the Highest Score
+
+ - The Highest Score is now saved in a .txt file
+ - The Player Record is shown in the start of the game
 
 ## Controls
 
@@ -47,5 +53,7 @@ Snake Game - Day 20 + 21/
 ├── food.py # Food class implementation
 
 ├── scoreboard.py # Score tracking system implemented by class
+
+├── data.txt # Saves the highest score
 
 └── README.md # Project documentation

@@ -29,6 +29,14 @@ class Snake:
         new_segment.goto(position)
         self.segments.append(new_segment)
 
+    # Remove all segments that was added on the snake -> It's been used when the snake hits the wall
+    def reset(self):
+        for seg in self.segments: #makes the segments disappear from the screen
+            seg.goto(1000,1000)
+        self.segments.clear() #clear the segments list
+        self.create_snake() #create another 3 new segments again
+        self.head = self.segments[0]
+
     # Add a new segment to the snake after it eats a food
     def extend(self):
         #getting the position of the very last segment of the snake and adding a new one on this position
